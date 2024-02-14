@@ -5,9 +5,9 @@ public class CloudMailService : IMailService
     private readonly string _mailTo = string.Empty;
     private readonly string _mailFrom = string.Empty;
     /*
-        Dal momento in cui passo i dati tramite il file json posso modificare queste 2 stringhe come qua sopra!
-        private string _mailTo = "admin@mycompany.com";
-        private string _mailFrom = "noreply@mycompany.com";
+        Per poter usare questa altra soluzione ho creato un file appsettings, chiamato "appSettings.Development.json" e sono andato
+        ad inserirci dei dati. Per usarlo in debug devo fare click destro su "Qualcosa" poi proprietà, andare in Debug
+        cliccare su "Aprire interfaccia utente..." e cambiare la variabile d'ambiente da "Developement" a "Production"!!!
     */
     public CloudMailService(IConfiguration configuration)
     {

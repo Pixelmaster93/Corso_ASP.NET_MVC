@@ -1,5 +1,7 @@
 using CityInfoAPI;
 using Microsoft.AspNetCore.StaticFiles;
+using Microsoft.EntityFrameworkCore;
+using Qualcosa.DbContexts;
 using Qualcosa.Services;
 using Serilog;
 
@@ -40,6 +42,9 @@ builder.Services.AddTransient<IMailService, CloudMailService>();// Qua implaemnt
 #endif
 
 builder.Services.AddSingleton<CitiesDataStore>();
+
+builder.Services.AddDbContext<CityInfoContext>(
+    dbContextOpions => dbContextOpions.UseSqlite("Data Source=CityInfo.db"));
 
 var app = builder.Build();
 
