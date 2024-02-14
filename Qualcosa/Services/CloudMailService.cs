@@ -7,7 +7,7 @@ public class CloudMailService : IMailService
     /*
         Per poter usare questa altra soluzione ho creato un file appsettings, chiamato "appSettings.Development.json" e sono andato
         ad inserirci dei dati. Per usarlo in debug devo fare click destro su "Qualcosa" poi proprietà, andare in Debug
-        cliccare su "Aprire interfaccia utente..." e cambiare la variabile d'ambiente da "Developement" a "Production"!!!
+        cliccare su "Aprire interfaccia utente..." e cambiare la variabile d'ambiente da "Development" a "Production"!!!
     */
     public CloudMailService(IConfiguration configuration)
     {

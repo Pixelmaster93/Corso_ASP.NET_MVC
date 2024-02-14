@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Entities;
 
 namespace CityInfoAPI.Entities
 {
@@ -12,6 +13,9 @@ namespace CityInfoAPI.Entities
         [Required]
         [MaxLength(50)]
         public string Name { get; set; }
+
+        [MaxLength(200)]
+        public string Description { get; set; }
 
         [ForeignKey("CityId")]
         public City? City { get; set; }//serve a collegare i point of interest con le city tramite la primary key

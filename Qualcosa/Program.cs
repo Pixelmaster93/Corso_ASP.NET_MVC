@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using CityInfoAPI.DbContexts;
 using CityInfoAPI.Services;
 using Serilog;
+using CityInfo.API.Services;
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
@@ -44,7 +45,12 @@ builder.Services.AddTransient<IMailService, CloudMailService>();// Qua implaemnt
 builder.Services.AddSingleton<CitiesDataStore>();
 
 builder.Services.AddDbContext<CityInfoContext>(
-    dbContextOpions => dbContextOpions.UseSqlite("Data Source=CityInfo.db"));
+    dbContextOpions => dbContextOpions.UseSqlite(
+        builder.Configuration["ConnectionStrings:CityInfoDBConnectionString"]));// inserisco il path del DB in appsettings.Develpment.json cosi posso mettere questo "path" 
+
+builder.Services.AddScoped<ICityInfoRepository, CityInfoRepository>();
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 
