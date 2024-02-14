@@ -2,13 +2,18 @@
 {
     public class LocalMailService : IMailService
     {
-        private string _mailTo = "admin@mycompany.com";
-        private string _mailFrom = "noreply@mycompany.com";
 
+        private readonly string _mailTo = string.Empty;
+        private readonly string _mailFrom = string.Empty;
+        /*
+            Dal momento in cui passo i dati tramite il file json posso modificare queste 2 stringhe come qua sopra!
+            private string _mailTo = "admin@mycompany.com";
+            private string _mailFrom = "noreply@mycompany.com";
+        */
         public LocalMailService(IConfiguration configuration)
         {
-            _mailTo = configuration["mailSettings : mailToAddress"];
-            _mailFrom = configuration["mailSettings : mailFromAddress"];
+            _mailTo = configuration["mailSettings:mailToAddress"];// WARNING!!! NON METTERE NESSUNO SPAZIO NELLA STRINGA ALTRIMENTI NON FUNZIONA!!!!
+            _mailFrom = configuration["mailSettings:mailFromAddress"];
 
             /* Questo sopra posso farlo perchè ho aggiunto questo comando json
              * 
