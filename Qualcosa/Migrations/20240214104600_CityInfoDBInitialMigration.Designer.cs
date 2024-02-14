@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Qualcosa.DbContexts;
+using CityInfoAPI.DbContexts;
 
 #nullable disable
 
-namespace Qualcosa.Migrations
+namespace CityInfoAPI.Migrations
 {
     [DbContext(typeof(CityInfoContext))]
     [Migration("20240214104600_CityInfoDBInitialMigration")]

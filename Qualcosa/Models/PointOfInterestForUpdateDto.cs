@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Qualcosa.Models
+namespace CityInfoAPI.Models
 {
     public class PointOfInterestForUpdateDto
     {

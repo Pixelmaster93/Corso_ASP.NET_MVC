@@ -1,4 +1,4 @@
-﻿namespace Qualcosa.Services
+﻿namespace CityInfoAPI.Services
 {
     public interface IMailService
     {

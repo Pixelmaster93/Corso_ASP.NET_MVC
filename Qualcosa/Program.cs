@@ -1,8 +1,8 @@
 using CityInfoAPI;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.EntityFrameworkCore;
-using Qualcosa.DbContexts;
-using Qualcosa.Services;
+using CityInfoAPI.DbContexts;
+using CityInfoAPI.Services;
 using Serilog;
 
 Log.Logger = new LoggerConfiguration()

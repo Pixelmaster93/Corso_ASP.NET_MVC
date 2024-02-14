@@ -2,8 +2,8 @@
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
-using Qualcosa.Models;
-using Qualcosa.Services;
+using CityInfoAPI.Models;
+using CityInfoAPI.Services;
 
 namespace CityInfoAPI.Controllers
 {

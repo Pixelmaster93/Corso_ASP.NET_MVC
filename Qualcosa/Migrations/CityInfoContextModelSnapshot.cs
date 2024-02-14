@@ -2,11 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Qualcosa.DbContexts;
+using CityInfoAPI.DbContexts;
 
 #nullable disable
 
-namespace Qualcosa.Migrations
+namespace CityInfoAPI.Migrations
 {
     [DbContext(typeof(CityInfoContext))]
     partial class CityInfoContextModelSnapshot : ModelSnapshot

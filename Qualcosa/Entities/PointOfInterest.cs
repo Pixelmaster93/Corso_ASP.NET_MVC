@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace Qualcosa.Entities
+namespace CityInfoAPI.Entities
 {
     public class PointOfInterest
     {
