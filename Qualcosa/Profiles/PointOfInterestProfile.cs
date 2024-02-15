@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
-using CityInfoAPI;
+using CityInfoAPI.Models;
+using Models;
+using CityInfoAPI.Entities;
 
 namespace CityInfo.API.Profiles
 {
@@ -7,7 +9,10 @@ namespace CityInfo.API.Profiles
     {
         public PointOfInterestProfile() 
         {
-            CreateMap<CityInfoAPI.Entities.PointOfInterest, CityInfoAPI.Models.PointOfInterestDto>();
+            CreateMap<PointOfInterest, PointOfInterestDto>();
+            CreateMap<PointOfInterestForCreationDto, PointOfInterest>();
+            CreateMap<PointOfInterestForUpdateDto, PointOfInterest>();
+            CreateMap<PointOfInterest, PointOfInterestForUpdateDto>();
         }
     }
 }

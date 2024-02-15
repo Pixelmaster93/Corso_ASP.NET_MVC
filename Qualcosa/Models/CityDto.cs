@@ -1,4 +1,5 @@
 ﻿using CityInfoAPI.Models;
+using Models;
 
 namespace CityInfo.API.Models
 {
