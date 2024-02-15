@@ -69,7 +69,7 @@ namespace CityInfoAPI.Controllers
             
         }
 
-        [HttpGet("{pointofinterestid}", Name = "GetPointOfInterest")]
+        [HttpGet("{pointOfInterestId}", Name = "GetPointOfInterest")]
         public async Task<ActionResult<PointOfInterestDto>> GetPointOfInterest(
             int cityId, int pointOfInterestId)
         {
@@ -162,7 +162,7 @@ namespace CityInfoAPI.Controllers
         }
 
         
-        [HttpPut("{pointofinterestid}")]
+        [HttpPut("{pointOfInterestId}")]
 
         public async Task<ActionResult> UpdatePointOfInterest(int cityId, int pointOfInterestId,
             PointOfInterestForUpdateDto pointOfInterest)
